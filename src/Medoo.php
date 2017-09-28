@@ -861,7 +861,7 @@ class Medoo
 										$table . '."' . $key . '"'
 								) .
 								' = ' .
-								$this->tableQuote(isset($match[ 'alias' ]) ? $match[ 'alias' ] : $match[ 'table' ]) . '."' . $value . '"';
+								$this->tableQuote(isset($match[ 'alias' ]) ? $match[ 'alias' ] : $match[ 'table' ]) . '.`' . $value . '`';
 							}
 
 							$relation = 'ON ' . implode($joins, ' AND ');
